@@ -34,7 +34,7 @@ const HeroSection = () => (
           <span className="text-red-400">en realidades digitales</span>
         </motion.h1>
         <motion.p variants={fadeIn('up', 0.3)} className="text-gray-300 text-lg">
-          Soy Gerald Lanza Rodríguez: apasionado por la ingeniería en sistemas, con experiencia en servicios y soporte técnico, y enfocado en soluciones de alto impacto.
+         Soy Gerald Lanza Rodríguez, estudiante de Ingeniería en Sistemas de Información con experiencia en servicios y soporte técnico, desarrollo web usando React, NestJS, Node.js y TailwindCSS. Me apasiona diseñar soluciones escalables, optimizar flujos de trabajo mediante metodologías ágiles y prácticas DevOps, y asegurar una experiencia de usuario sólida, siempre orientado a la calidad del código y al impacto real en los proyectos.
         </motion.p>
         <motion.div variants={fadeIn('up', 0.5)} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a
