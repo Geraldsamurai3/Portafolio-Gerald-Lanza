@@ -50,7 +50,7 @@ const TechStack = () => (
       viewport={{ once: true }}
     >
       <FaTools className="text-red-400" />
-      Tecnologías y Herramientas
+      Tecnologías y herramientas
     </motion.h2>
 
     <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 justify-center items-center text-3xl">

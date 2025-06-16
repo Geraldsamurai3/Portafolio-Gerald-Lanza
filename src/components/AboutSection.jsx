@@ -56,35 +56,40 @@ const AboutSection = () => (
       </motion.div>
 
       {/* Educación y Experiencia */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeUp}
-        custom={2}
-      >
-        <h3 className="flex items-center justify-center text-4xl font-bold mb-6 border-b-2 border-red-400 pb-2 gap-2">
-          <FaGraduationCap className="text-red-400" /> Educación y Experiencia
-        </h3>
-        <div className="space-y-4 text-gray-300 max-w-3xl mx-auto">
-          <div className="flex items-start gap-3">
-            <span className="text-red-400 mt-1">•</span>
-            <p><strong>UNA Costa Rica</strong> – Ingeniería en Sistemas de Información (en curso).</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="text-red-400 mt-1">•</span>
-            <p><strong>Proyecto Académico</strong> – Sistema colaborativo para gestión educativa.</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="text-red-400 mt-1">•</span>
-            <p><strong>Emprendimiento propio</strong> – Servicios y soporte técnico a usuarios finales.</p>
-          </div>
-          <div className="flex items-start gap-3">
-            <span className="text-red-400 mt-1">•</span>
-            <p><strong>FUCOEN</strong> – Gestión de información para fundación cristiana sin fines de lucro (en curso).</p>
-          </div>
-        </div>
-      </motion.div>
+    <motion.div
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeUp}
+  custom={2}
+>
+  <h3 className="flex items-center justify-center text-4xl font-bold mb-6 border-b-2 border-red-400 pb-2 gap-2">
+    <FaGraduationCap className="text-red-400" /> Educación y experiencia
+  </h3>
+  <div className="space-y-4 text-gray-300 max-w-3xl mx-auto">
+    <div className="flex items-start gap-3">
+      <span className="text-red-400 mt-1">•</span>
+      <p><strong>UNA Costa Rica</strong> – Ingeniería en Sistemas de Información (en curso).</p>
+    </div>
+    <div className="flex items-start gap-3">
+      <span className="text-red-400 mt-1">•</span>
+      <p><strong>Proyecto Académico</strong> – Sistema colaborativo para gestión educativa.</p>
+    </div>
+    <div className="flex items-start gap-3">
+      <span className="text-red-400 mt-1">•</span>
+      <p><strong>Emprendimiento propio</strong> – Servicios y soporte técnico a usuarios finales.</p>
+    </div>
+    <div className="flex items-start gap-3">
+      <span className="text-red-400 mt-1">•</span>
+      <p><strong>FUCOEN</strong> – Gestión de información para fundación cristiana sin fines de lucro (en curso).</p>
+    </div>
+    <div className="flex items-start gap-3">
+      <span className="text-red-400 mt-1">•</span>
+      <p><strong>Inteligencia Artificial</strong> – Implementación de soluciones basadas en AI para resolver problemas complejos y optimizar procesos.</p>
+    </div>
+  </div>
+</motion.div>
+
 
       {/* Tecnologías */}
       <motion.div
@@ -129,7 +134,7 @@ const AboutSection = () => (
         custom={5}
       >
         <h3 className="flex items-center justify-center text-4xl font-bold mb-6 border-b-2 border-red-400 pb-2 gap-2">
-          <FaBriefcase className="text-red-400" /> Experiencia Laboral
+          <FaBriefcase className="text-red-400" /> Experiencia laboral
         </h3>
         <div className="space-y-6 max-w-3xl mx-auto text-gray-300">
           <div className="flex items-start gap-3">
