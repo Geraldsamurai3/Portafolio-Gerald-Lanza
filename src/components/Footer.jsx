@@ -21,7 +21,6 @@ const Footer = () => (
           <li>Desarrollo Web</li>
           <li>Soporte Técnico</li>
           <li>Consultoría TI</li>
-          <li>Automatización DevOps</li>
         </ul>
       </div>
 

@@ -1,7 +1,7 @@
 // File: src/components/HeroSection.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowDown } from 'react-icons/fa';
+import { FaArrowDown, FaFolderOpen } from 'react-icons/fa';
 
 const container = {
   hidden: {},
@@ -25,9 +25,24 @@ const fadeIn = (direction = 'up', delay = 0) => ({
 const HeroSection = () => (
   <section className="h-screen bg-gray-950 text-white px-6 flex items-center">
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-      {/* Texto */}
+      
+      {/* Avatar: primero en móvil, pero a la derecha en md+ */}
       <motion.div
-        className="space-y-6 text-center md:text-left"
+        className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-red-400 order-first md:order-last"
+        variants={fadeIn('left', 0.7)}
+        initial="hidden"
+        animate="visible"
+      >
+        <img
+          src="https://res.cloudinary.com/da84etlav/image/upload/v1749978497/OxigenBoy_phssai.jpg"
+          alt="Gerald Lanza Rodríguez"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
+
+      {/* Texto: primero en md, debajo en móvil */}
+      <motion.div
+        className="space-y-6 text-center md:text-left order-last md:order-first"
         variants={container}
         initial="hidden"
         animate="visible"
@@ -37,7 +52,7 @@ const HeroSection = () => (
           <span className="text-red-400">en realidades digitales</span>
         </motion.h1>
         <motion.p variants={fadeIn('up', 0.3)} className="text-gray-300 text-lg">
-          Soy Gerald Lanza Rodríguez: apasionado por la ingeniería en sistemas, con experiencia  en servicios y soporte técnico, y enfocado en soluciones de alto impacto.
+          Soy Gerald Lanza Rodríguez: apasionado por la ingeniería en sistemas, con experiencia en servicios y soporte técnico, y enfocado en soluciones de alto impacto.
         </motion.p>
         <motion.div variants={fadeIn('up', 0.5)} className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a
@@ -47,7 +62,7 @@ const HeroSection = () => (
             Conocer más <FaArrowDown />
           </a>
           <a
-            href="public\Documents\Currículum Vitae Gerald Lanza.pdf"
+            href="https://res.cloudinary.com/tu_cloud_name/image/upload/v1620000000/CV_Gerald_Lanza.pdf"
             download
             className="inline-block border border-red-400 text-red-400 px-6 py-2 rounded-lg hover:bg-red-500 hover:text-white transition"
           >
@@ -56,19 +71,6 @@ const HeroSection = () => (
         </motion.div>
       </motion.div>
 
-      {/* Avatar sin animación de flotación */}
-      <motion.div
-        className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-red-400"
-        variants={fadeIn('left', 0.7)}
-        initial="hidden"
-        animate="visible"
-      >
-        <img
-          src="public\image\OxigenBoy.jpg"
-          alt="Gerald Lanza Rodríguez"
-          className="w-full h-full object-cover"
-        />
-      </motion.div>
     </div>
   </section>
 );
