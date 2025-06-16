@@ -1,7 +1,7 @@
 // File: src/components/HeroSection.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowDown, FaFolderOpen } from 'react-icons/fa';
+import { FaArrowDown } from 'react-icons/fa';
 
 const container = {
   hidden: {},
@@ -12,7 +12,7 @@ const fadeIn = (direction = 'up', delay = 0) => ({
   hidden: {
     opacity: 0,
     x: direction === 'left' ? 40 : 0,
-    y: direction === 'up' ? 40 : 0,
+    y: direction === 'up'   ? 40 : 0,
   },
   visible: {
     opacity: 1,
@@ -26,7 +26,7 @@ const HeroSection = () => (
   <section className="h-screen bg-gray-950 text-white px-6 flex items-center">
     <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
       
-      {/* Avatar: primero en móvil, pero a la derecha en md+ */}
+      {/* Avatar */}
       <motion.div
         className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden shadow-2xl border-4 border-red-400 order-first md:order-last"
         variants={fadeIn('left', 0.7)}
@@ -40,7 +40,7 @@ const HeroSection = () => (
         />
       </motion.div>
 
-      {/* Texto: primero en md, debajo en móvil */}
+      {/* Texto */}
       <motion.div
         className="space-y-6 text-center md:text-left order-last md:order-first"
         variants={container}
@@ -61,12 +61,14 @@ const HeroSection = () => (
           >
             Conocer más <FaArrowDown />
           </a>
+          {/* Abrir en visor PDF del navegador */}
           <a
-            href="https://res.cloudinary.com/tu_cloud_name/image/upload/v1620000000/CV_Gerald_Lanza.pdf"
-            download
+            href="/Documents/Curriculum-Vitae-Gerald-Lanza.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block border border-red-400 text-red-400 px-6 py-2 rounded-lg hover:bg-red-500 hover:text-white transition"
           >
-            Descargar CV
+            Ver CV
           </a>
         </motion.div>
       </motion.div>
